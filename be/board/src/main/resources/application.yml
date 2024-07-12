@@ -1,0 +1,10 @@
+spring:
+  profiles:
+    include: secret
+
+  jpa:
+    database-platform: org.hibernate.dialect.MySQLDialect
+    open-in-view: false
+    show-sql: true
+    hibernate:
+      ddl-auto: update

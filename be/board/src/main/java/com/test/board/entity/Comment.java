@@ -6,7 +6,7 @@ import lombok.Setter;
 
 @Entity
 @Getter @Setter
-public class Comment {
+public class Comment extends BaseTimeEntity{
     @Id @GeneratedValue
     @Column(name = "comment_id")
     private Long id;

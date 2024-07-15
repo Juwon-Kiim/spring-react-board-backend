@@ -9,7 +9,7 @@ import java.util.List;
 
 @Entity
 @Getter @Setter
-public class Board {
+public class Board extends BaseTimeEntity{
     @Id @GeneratedValue
     @Column(name = "board_id")
     private Long id;

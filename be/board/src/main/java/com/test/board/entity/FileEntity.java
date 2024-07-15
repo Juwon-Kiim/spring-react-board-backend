@@ -6,7 +6,7 @@ import lombok.Setter;
 
 @Entity
 @Getter @Setter
-public class FileEntity {
+public class FileEntity extends BaseTimeEntity{
     @Id @GeneratedValue
     @Column(name = "file_id")
     private Long id;

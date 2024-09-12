@@ -1,6 +1,6 @@
 package com.test.board.controller;
 
-import com.test.board.dto.JoinDTO;
+import com.test.board.dto.request.JoinReqDTO;
 import com.test.board.service.MemberService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
@@ -17,9 +17,9 @@ public class MemberController {
     private final MemberService memberService;
 
     @PostMapping("/join")
-    public ResponseEntity<?> join(@RequestBody JoinDTO joinDTO){
-        Long id = memberService.join(joinDTO);
-        return new ResponseEntity<>(id, HttpStatus.OK);
+    public ResponseEntity<?> join(@RequestBody JoinReqDTO joinReqDTO){
+        Long id = memberService.join(joinReqDTO);
+        return new ResponseEntity<>(id, HttpStatus.CREATED);
     }
 
 }
